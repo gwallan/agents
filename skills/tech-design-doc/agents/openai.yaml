@@ -1,0 +1,4 @@
+interface:
+  display_name: "技术设计文档生成"
+  short_description: "基于 PRD、API 文档和术语表生成可交付的中文技术设计文档，包含页面-接口映射、字段映射和状态映射"
+  default_prompt: "Use $tech-design-doc to turn a PRD and API docs into a concise Chinese technical design document with page-to-API, field, and status mappings, plus implementation locations and workflow sections."
