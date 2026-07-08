@@ -1,6 +1,6 @@
 {
-  "name": "wuwen agents infra",
-  "displayName": "ww-plugins",
+  "name": "common",
+  "displayName": "wuwen agents infra",
   "version": "0.1.0",
   "description": "wuwen Cursor plugin starter with rules and skills.",
   "author": {
