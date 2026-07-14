@@ -3,116 +3,112 @@ name: requirements-refiner
 description: Use when the user provides a PRD, feature brief, or ambiguous requirements and wants help resolving ambiguities, aligning terminology, or rewriting them into an implementation-ready specification for frontend or engineering work.
 ---
 
-# Requirement Refiner
+# 需求精炼器
 
-## Overview
+## 概述
 
-Use this skill to transform informal or ambiguous product requirement into clear, implementable requirement specifications. Focus on disambiguating terminology, clarifying state and process rules, and listing the minimal unresolved issues needed to advance engineering work.
+运用此技能将非正式或模糊的产品需求转化为清晰、可执行的需求规格说明。重点在于消除术语歧义，明确状态与流程规则，并列出推进工程工作所需的最少未决问题。
 
-<!-- When possible, first normalize the input into a fixed requirement template, then perform analysis to ensure consistent output across different documents. -->
+<!-- 在可能的情况下，先将输入规范化为固定需求模板，然后进行分析，以确保不同文档的输出一致。 -->
 
-## Workflow
+## 工作流程
 
-### 1. First, Read the Project Rules
+### 1. 首先，阅读项目规则
 
-- Before reading the user's requirements document, identify which web application it belongs to. If the repository contains multiple web apps, choose the target app first, then load that app's `docs/index.md` if it exists, followed by the project business rules from `docs/` within that app.
+- 在阅读用户的需求文档之前，确定它属于哪个 Web 应用。如果仓库包含多个 Web 应用，请先选择目标应用，然后加载该应用的 `docs/index.md`（如果存在），接着加载该应用内 `docs/` 下的项目业务规则。
 
-- Understand these project business rules so that when comparing with the requirements document later, you base your analysis on project facts rather than assumptions, especially `docs/glossary.md` and `docs/decisions.md`.
+- 理解这些项目业务规则，以便在之后与需求文档进行比较时，基于项目事实而非假设进行分析，尤其要关注 `docs/glossary.md` 和 `docs/decisions.md`。
 
-### 2. Then, Carefully understand the product requirements input by the user.
+### 2. 然后，仔细理解用户输入的产品需求
 
-- Identify business goals, target users, business functions, and main workflows.
+- 识别业务目标、目标用户、业务功能和主要工作流程。
 
-- Distinguish core behaviors from nice-to-have details.
+- 区分核心行为与锦上添花的细节。
 
-- Note any assumptions that seem to be made but are not explicitly stated in the document.
+- 注意文档中似乎已做出但未明确陈述的任何假设。
 
-- If the input is not yet structured, first organize it into a standard requirements template before proceeding with in-depth analysis.
+- 如果输入尚未结构化，请先将其组织成标准需求模板，然后再进行深入分析。
 
-### 3. Standardize Terminology
+### 3. 标准化术语
 
-- Extract all domain terms, objects, states, and actions.
+- 提取所有领域术语、对象、状态和动作。
 
-- Mark aliases, overloaded terms, and words that should not be confused.
+- 标记别名、重载术语以及不应混淆的词语。
 
-- If a term changes meaning across different sections or conflicts with project business rules, clearly point it out.
+- 如果某个术语在不同部分的含义发生变化，或与项目业务规则冲突，请明确指出。
 
-### 4. Build Object and State Models
+### 4. 构建对象与状态模型
 
-- List core entities and their key attributes.
+- 列出核心实体及其关键属性。
 
-- For each important interaction, write a state machine or lifecycle that describes state transitions or availability.
+- 对于每个重要交互，编写一个状态机或生命周期，描述状态转换或可用性。
 
-- Record the transition rules, allowed actions, and prohibited actions for each state.
+- 记录每个状态的转换规则、允许的操作和禁止的操作。
 
-### 5. Validate Interaction Details
+### 5. 验证交互细节
 
-- Clarify entry points, layout, empty states, loading states, and error states.
+- 明确入口点、布局、空状态、加载状态和错误状态。
 
-- When the document mentions "backend processing" or "frontend processing", specify which side is actually responsible for the logic.
+- 当文档提到“后端处理”或“前端处理”时，请具体说明哪个端实际负责该逻辑。
 
-### 5.1 Interaction Design Analysis
+### 5.1 交互设计分析
 
-- Extract user-visible functions and translate them into interaction elements.
+- 提取用户可见的功能，并将其转化为交互元素。
 
-- Using state machine thinking, represent each flow as "user action → system response → page change".
+- 运用状态机思维，将每个流程表示为“用户操作 → 系统响应 → 页面变化”。
 
-- Clearly identify empty data, error prompts, constraints, and other boundary states.
+- 明确标识空数据、错误提示、约束条件及其他边界状态。
 
-- Output the results in a structured list, including:
+- 以结构化列表进行梳理，包括：
 
-  - Function name
+  - 功能名称
 
-  - User action
+  - 用户操作
 
-  - System feedback
+  - 系统反馈
 
-  - Preconditions
+  - 前置条件
 
-  - Exception handling
+  - 异常处理
 
-- The analysis should focus on interaction behavior, not implementation details, unless an interface contract is needed to explain the behavior.
+- 分析应聚焦于交互行为而非实现细节，除非需要接口合约来解释行为。
 
-### 6. Clarify Development Boundaries and Scope
+### 6. 明确开发边界与范围
 
-- Sort out which tasks are frontend development work and which are backend development work.
+- 梳理哪些任务是前端开发工作，哪些是后端开发工作。
 
-- The final output should be a requirements document oriented towards frontend development needs.
+- 最终输出应是一份面向前端开发需求的需求文档。
 
-### 7. Drill Down
+### 7. 深入追问与反馈
 
-- For requirements or designs, ask questions in batches, but only for branches that still change the spec after checking project docs and code.
+- 对于需求或设计不清晰的情况下，可以分批提问，但仅针对那些在检查项目文档和代码后仍会改变规格说明的分支。
 
-- Resolve each branch that affects behavior, UI, ownership, or acceptance criteria before moving on. Provide a recommended answer for each question.
+- 在继续推进之前，解决每个影响行为、UI、归属或验收标准的分支。为每个问题提供推荐答案。
 
-- If a branch cannot be answered from the repository and does not block the implementation-ready spec, capture it in "Pending Issues" instead of looping.
+- 如果某个分支无法从仓库中获得答案，且不妨碍准备就绪的规格说明，则将其记录在“待处理问题”中，而不是循环追问。
 
-- If a question can be answered by exploring the codebase, prioritize doing so before asking the user.
+- 如果可以通过探索代码库来回答问题，则优先这样做，然后再询问用户。
 
-### 8. Generate Clear Product Requirement Specifications
+### 8. 生成清晰的产品需求规格说明
 
-- Must follow the existing standard template in `references/prd-template.md` for document writing, and supplement missing content when necessary.
+- 必须遵循 `@references/prd-template.md` 标准模板进行输出，并在必要时补充缺失内容。
 
-- Before finalizing, load `references/checklist.md` and use it as the delivery gate for the refined specification.
+- 最终定稿前，加载 `@references/checklist.md`，并将其作为精炼规格说明的交付把关。
 
-- Ensure the document content is a structure that the engineering team can directly implement.
+- 确保文档内容是一个工程团队可以直接实施的结构。
 
-- Keep language concise, consistent, and testable.
+- 保持语言简洁、一致且可测试。
 
-- Add a dedicated "Pending Issues" or "Ambiguity Markers" section for unresolved items.
+- 为未解决的项目添加专门的“待处理问题”或“歧义标记”部分。
 
-- Where possible, prioritize clear rules over paragraph descriptions.
+## 绝不可做
 
-## Never Do
+- 绝不可将假设重写为事实，应将其标记为问题或待处理问题。
 
-- Never analyzing existing code to understand the current functionality; instead, understand it through existing documentation.
+- 绝不可为了缩短文档而将不同的领域术语合并为一个标签。
 
-- Never rewrite an assumption as a fact; label it as a question or a pending issue.
+- 绝不可在没有指明责任方的情况下，将前端职责和后端职责混合在同一条规则中。
 
-- Never merge distinct domain terms into one label just to shorten the document.
+- 绝不可编造项目规则或源材料中未支持的状态、验收标准或错误路径。
 
-- Never mix frontend responsibility and backend responsibility in the same rule without naming the owner.
-
-- Never invent states, acceptance criteria, or error paths that are not supported by project rules or source material.
-
-- Never keep asking questions after the remaining uncertainty no longer changes the structure of the spec.
+- 绝不可在剩余不确定性不再改变规格结构后继续提问。
