@@ -105,6 +105,8 @@ Use this skill to transform informal or ambiguous product requirement into clear
 
 ## Never Do
 
+- Never analyzing existing code to understand the current functionality; instead, understand it through existing documentation.
+
 - Never rewrite an assumption as a fact; label it as a question or a pending issue.
 
 - Never merge distinct domain terms into one label just to shorten the document.
