@@ -1,31 +1,41 @@
-# Requirements Refinement Checklist
+# 需求精炼清单
 
-## 1. Terminology
+## 1. 术语
 
-- Define one canonical term per core concept.
-- List aliases and banned words.
-- Call out meanings that change by section.
+- 为每个核心概念定义一个规范术语。
 
-## 2. Entities and States
+- 列出别名和禁用词。
 
-- Identify core objects and their key attributes.
-- Define state transitions and allowed actions.
-- Separate default/system categories from user-defined categories.
+- 指出在不同章节含义有所变化的术语。
 
-## 3. Flow and Interaction
+## 2. 实体与状态
 
-- Map each user action to a backend API or a local behavior.
-- Specify loading, empty, error, and recovery states.
-- State whether updates happen immediately or on refresh/polling.
+- 识别核心对象及其关键属性。
 
-## 4. Output
+- 定义状态转换和允许的操作。
 
-- Rewrite into an implementation-ready spec.
-- Include unresolved questions in a dedicated section.
-- Keep wording concise, testable, and unambiguous.
+- 将默认/系统类别与用户定义类别区分开。
 
-## 5. Delivery Gate
+## 3. 流程与交互
 
-- Use this checklist only at the end, after the draft spec is written.
-- If any item fails, revise the spec before handing it off.
-- Do not load this file unless the work has reached final review.
+- 将每个用户操作映射到后端 API 或本地行为。
+
+- 明确加载态、空态、错误态和恢复态。
+
+- 说明更新是立即生效还是需要刷新/轮询。
+
+## 4. 输出
+
+- 改写为可落地实施的规格说明。
+
+- 将未解决的问题放在专门的章节中。
+
+- 保持措辞简洁、可测试且无歧义。
+
+## 5. 交付关卡
+
+- 仅在草稿规格说明编写完成后使用此清单。
+
+- 如果有任何条目不达标，请在移交前修订规格说明。
+
+- 除非工作已进入最终评审阶段，否则请勿加载此文件。

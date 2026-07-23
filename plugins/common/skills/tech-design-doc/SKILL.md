@@ -13,7 +13,7 @@ description: Use when the user provides a PRD, feature brief, API document, or t
 
 ### 1. 先确认当前应用
 
-- 先判断当前 web 应用属于 `platform` 、`assets` 、`sim` 、`editor` 中的哪一个
+- 如果当前项目刚才下包含多个应用，需要先判断当前 web 应用属于哪一个
 - 如果上下文已经明确，则直接沿用
 - 如果不明确，优先根据 PRD、接口文档、页面名、路径名和术语判断；仍不明确时，先看应用所属路径下的 `AGENTS.md` 和 `docs/index.md`，不要猜
 - 只使用当前应用对应的文档与术语，不混用另一个应用的页面、路径和字段命名
@@ -23,7 +23,7 @@ description: Use when the user provides a PRD, feature brief, API document, or t
 - 优先读取当前 Web 应用的 `AGENTS.md`
 - 读取 `docs/index.md`，再按需读取 `glossary.md`、`decisions.md`
 - 读取用户提供的 PRD、API 文档与技术设计模板
-- **MANDATORY - READ ENTIRE FILE**: 生成前必须完整读取 `references/tech-design-template.md`，不要只看标题、目录或片段
+- **MANDATORY - READ ENTIRE FILE**: 生成前必须完整读取 `@/references/tech-design-template.md`，不要只看标题、目录或片段
 
 ### 3. 深度理解实现
 
@@ -51,7 +51,7 @@ description: Use when the user provides a PRD, feature brief, API document, or t
 7. 注意事项
 8. 后续优化方向
 
-- 模板内容保存在 `references/tech-design-template.md`
+- 模板内容保存在 `@/references/tech-design-template.md`
 - 生成最终文档时优先对照该模板的章节、措辞和信息组织方式
 - 页面与接口对应关系、展示字段与接口字段对应关系、状态文案与后端枚举对应关系，必须补齐为表格或明确映射
 - 没有实际内容的章节直接写「本期不涉及」，不要留空
