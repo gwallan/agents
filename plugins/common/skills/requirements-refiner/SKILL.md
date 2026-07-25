@@ -15,9 +15,9 @@ description: Use when the user provides a PRD, feature brief, or ambiguous requi
 
 ### 1. 首先，阅读项目规则
 
-- 在阅读用户的需求文档之前，确定它属于哪个 Web 应用。如果仓库包含多个 Web 应用，请先选择目标应用，然后加载该应用的 `docs/index.md`（如果存在），接着加载该应用内 `docs/` 下的项目业务规则。
+- 在阅读用户的需求文档之前，确定它属于哪个 Web 应用。如果仓库包含多个 Web 应用，请先选择目标应用，然后加载该应用的 `docs/index.md`（如果存在），文档中提到的关联文档可以作为你梳理用户需求的参考。
 
-- 理解这些项目业务规则，以便在之后与需求文档进行比较时，基于项目事实而非假设进行分析，尤其要关注 `docs/glossary.md` 和 `docs/decisions.md`。
+- 重点关注 `docs/glossary.md` 和 `docs/decisions.md`这两个文档，这些项目业务规则，目的是不要去进行假设分析而是在作为事实依据。
 
 ### 2. 然后，仔细理解用户输入的产品需求
 
@@ -112,3 +112,5 @@ description: Use when the user provides a PRD, feature brief, or ambiguous requi
 - 绝不可编造项目规则或源材料中未支持的状态、验收标准或错误路径。
 
 - 绝不可在剩余不确定性不再改变规格结构后继续提问。
+
+- 绝不可在修改其它文档或者源码文件。
