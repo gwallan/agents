@@ -33,6 +33,8 @@ description: Use when the user provides a PRD, feature brief, or ambiguous requi
 
 - 如果输入尚未结构化，请先将其组织成标准需求模板，然后再进行深入分析。
 
+- 当前输入的需求与项目规则文档中的描述存在冲突时，那么就按照当前输入的需求描述为准
+
 ### 3. 标准化术语
 
 - 提取所有领域术语、对象、状态和动作。
