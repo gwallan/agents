@@ -53,7 +53,7 @@ description: Use when the user provides a PRD, feature brief, or ambiguous requi
 
 ### 5 交互设计分析
 
-- 提取用户可见的功能，并将其转化为交互元素。
+- 提取用户可见的功能，并将其转化为交互步骤。
 
 - 运用状态机思维，将每个流程表示为“用户操作 → 系统响应 → 页面变化”。
 
