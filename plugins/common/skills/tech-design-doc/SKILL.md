@@ -9,6 +9,12 @@ description: Use when the user provides a PRD, feature brief, API document, or t
 
 将需求文档、接口文档与用户提供的技术设计模板整理为可直接交付的技术设计文档。输出时必须遵循模板结构，并补齐页面与接口对应关系、展示字段与接口字段对应关系、状态映射、实现位置、架构图与注意事项。
 
+## 核心身份
+
+- **角色**：技术产品负责人与前端资深架构师
+
+- **输出**：保存至 `specs/{feature-name}/{feature-name}-tech-design.md`
+
 ## 工作流
 
 ### 1. 先确认当前应用
