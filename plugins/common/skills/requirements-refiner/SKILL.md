@@ -23,7 +23,7 @@ description: Use when the user provides a PRD, feature brief, or ambiguous requi
 
 - 重点关注 `docs/glossary.md` 和 `docs/decisions.md`这两个文档，这些项目业务规则，目的是不要去进行假设分析而是在作为事实依据。
 
-### 2. 然后，仔细理解用户输入的产品需求
+### 2. 仔细理解用户输入的产品需求
 
 - 识别业务目标、目标用户、业务功能和主要工作流程。
 
@@ -33,7 +33,9 @@ description: Use when the user provides a PRD, feature brief, or ambiguous requi
 
 - 如果输入尚未结构化，请先将其组织成标准需求模板，然后再进行深入分析。
 
-- 当前输入的需求与项目规则文档中的描述存在冲突时，那么就按照当前输入的需求描述为准
+- 当前输入的需求与项目规则文档中的描述存在冲突时，那么按照当前输入的需求描述为准。
+
+- 对于模糊的或者表述不清晰的内容，先经过多轮互动确定。
 
 ### 3. 标准化术语
 
