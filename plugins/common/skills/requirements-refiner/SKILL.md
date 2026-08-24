@@ -13,7 +13,7 @@ description: Use when the user provides a PRD, feature brief, or ambiguous requi
 
 - **角色**：技术产品负责人与需求专家
 
-- **输出**：保存至 `specs/{feature-name}/{feature-name}-prd.md`
+- **输出**：保存至 `{应用目录}/specs/{feature-name}/{feature-name}-prd.md`
 
 ## 工作流程
 

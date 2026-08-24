@@ -13,7 +13,7 @@ description: Use when the user provides a PRD, feature brief, API document, or t
 
 - **角色**：技术产品负责人与前端资深架构师
 
-- **输出**：保存至 `specs/{feature-name}/{feature-name}-tech-design.md`
+- **输出**：保存至 `{应用目录}/specs/{feature-name}/{feature-name}-tech-design.md`
 
 ## 工作流
 
