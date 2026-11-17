@@ -12,7 +12,7 @@
     {
       "name": "common",
       "source": "./plugins/common",
-      "description": "Minimal plugin with rules and skills only"
+      "description": "Shared skills and the pc-tool / image-tool review agent"
     }
   ]
 }

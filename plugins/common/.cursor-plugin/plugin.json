@@ -2,12 +2,12 @@
   "name": "common",
   "displayName": "wuwen agents infra",
   "version": "0.1.0",
-  "description": "wuwen Cursor plugin starter with rules and skills.",
+  "description": "wuwen Cursor plugin with shared skills and the pc-tool / image-tool review agent.",
   "author": {
     "name": "allan",
     "email": "gwallan@gmail.com"
   },
   "license": "MIT",
-  "keywords": ["cursor", "plugin", "rules", "skills"],
+  "keywords": ["cursor", "plugin", "rules", "skills", "agents"],
   "logo": "assets/logo.svg"
 }
